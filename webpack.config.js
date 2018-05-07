@@ -2,11 +2,12 @@ const path = require('path');
 const webpack = require('webpack'),
 	  HtmlWebpackPlugin = require('html-webpack-plugin'),
 	  OptimizeJsPlugin = require('optimize-js-plugin'),
-	  UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+	  UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
+	  env = process.env.NODE_ENV || 'development';
 
 	  const plugins = [
 	  	  new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: 'client/index.html',
             filename: 'index.html',
             inject: 'body',
       })];
@@ -18,8 +19,8 @@ const webpack = require('webpack'),
 				'webpack/hot/only-dev-server',
 			] : []).concat(['./client/index.js']),
 			output: {
-				path: path.resolve(__dirname, 'public'),
-				filename: './bundle.js'
+				filename: './bundle.js',
+				path: path.resolve(__dirname, 'public')
 			},
 
 			module: {
@@ -48,4 +49,4 @@ const webpack = require('webpack'),
 
 			plugins: plugins
 		}
-    };
+    
