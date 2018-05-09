@@ -5,14 +5,14 @@ const webpack = require('webpack'),
 	  UglifyJSPlugin = require('uglifyjs-webpack-plugin'),
 	  env = process.env.NODE_ENV || 'development';
 
-	  const plugins = [
+	  let plugins = [
 	  	  new HtmlWebpackPlugin({
             template: 'client/index.html',
             filename: 'index.html',
             inject: 'body',
       })];
 
-		return {
+		module.exports = {
 			entry: (env !== 'production' ? [
 				'react-hot-loader/patch',
 				'webpack-dev-server/client?http://localhost:8080',
