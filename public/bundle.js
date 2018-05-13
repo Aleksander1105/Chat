@@ -12102,7 +12102,7 @@ var App = function (_Component) {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
 					{ className: __WEBPACK_IMPORTED_MODULE_2__App_css___default.a.AppBody },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(UserList, {
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__UsersList__["a" /* default */], {
 						users: this.state.users
 					}),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -15797,7 +15797,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "body {\n    margin: 0;\n}\n\n._3HtT6GDZDXMjHHfhWbFwsK {\n    display: flex;\n    flex-direction: column;\n    flex: 1;\n    height: 100vh;\n}\n\n._llPSW5iWAXYliq7g-hel {\n    display: flex;\n    flex-direction: row;\n    align-items: center;\n    border-bottom: 1px solid #ccc;\n}\n\n._1tPWRuM3cHxgEU3qrRkHhf {\n    display: flex;\n    width: 25vw;\n    border-right: 1px solid #ccc;\n    justify-content: center;\n    box-sizing: border-box;\n    padding: 20px;\n}\n\n._3MMUFcgGDSdP1d0FlbFIdO {\n    display: flex;\n    width: 75vw;\n    justify-content: center;\n    box-sizing: border-box;\n    padding: 20px;\n}\n\n._1Xm1lSJwOROAwGzk130swu {\n    display: flex;\n    flex-direction: row;\n    flex: 1;\n}\n\n._1dVqIOiBK1eT6KrIm6Hnyo {\n    display: flex;\n    flex-direction: column;\n    width: 75vw;\n    flex: 1;\n}", ""]);
+exports.push([module.i, "body {\r\n    margin: 0;\r\n}\r\n\r\n._3HtT6GDZDXMjHHfhWbFwsK {\r\n    display: flex;\r\n    flex-direction: column;\r\n    flex: 1;\r\n    height: 100vh;\r\n}\r\n\r\n._llPSW5iWAXYliq7g-hel {\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    border-bottom: 1px solid #ccc;\r\n}\r\n\r\n._1tPWRuM3cHxgEU3qrRkHhf {\r\n    display: flex;\r\n    width: 25vw;\r\n    border-right: 1px solid #ccc;\r\n    justify-content: center;\r\n    box-sizing: border-box;\r\n    padding: 20px;\r\n}\r\n\r\n._3MMUFcgGDSdP1d0FlbFIdO {\r\n    display: flex;\r\n    width: 75vw;\r\n    justify-content: center;\r\n    box-sizing: border-box;\r\n    padding: 20px;\r\n}\r\n\r\n._1Xm1lSJwOROAwGzk130swu {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex: 1;\r\n}\r\n\r\n._1dVqIOiBK1eT6KrIm6Hnyo {\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 75vw;\r\n    flex: 1;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -15940,7 +15940,7 @@ var MessageForm = function (_Component) {
 			e.preventDefault();
 			var message = {
 				from: this.props.name,
-				text: this.props.text
+				text: this.state.text
 			};
 			this.props.onMessageSubmit(message);
 			this.setState({ text: '' });
@@ -15948,6 +15948,7 @@ var MessageForm = function (_Component) {
 	}, {
 		key: 'changeHandler',
 		value: function changeHandler(e) {
+			console.log(e.target.value);
 			this.setState({ text: e.target.value });
 		}
 	}, {
@@ -15973,7 +15974,7 @@ var MessageForm = function (_Component) {
 	}]);
 
 	return MessageForm;
-}(Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (MessageForm);
 
@@ -16036,7 +16037,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "._1jMi-csxQtX0aGs1vYDoVW {\n    display: flex;\n    flex-direction: row;\n}\n\n._2CwExyCf7HbiY7VMTFtGOz {\n    flex: 1;\n    padding: 20px;\n    border: 0;\n    border-top: 1px solid #ccc;\n}", ""]);
+exports.push([module.i, "._1jMi-csxQtX0aGs1vYDoVW {\r\n    display: flex;\r\n    flex-direction: row;\r\n}\r\n\r\n._2CwExyCf7HbiY7VMTFtGOz {\r\n    flex: 1;\r\n    padding: 20px;\r\n    border: 0;\r\n    border-top: 1px solid #ccc;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -16079,6 +16080,7 @@ var MessageList = function MessageList(props) {
 		'div',
 		{ className: __WEBPACK_IMPORTED_MODULE_1__MessageList_css___default.a.MessageList },
 		props.messages.map(function (message, i) {
+			console.log(message);
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Message, {
 				key: i,
 				from: message.from,
@@ -16149,7 +16151,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "._2UvbzmgCLZxth5pRT2XhDs {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: flex-start;\n    width: 75vw;\n    padding: 20px;\n}", ""]);
+exports.push([module.i, "._2UvbzmgCLZxth5pRT2XhDs {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    width: 75vw;\r\n    padding: 20px;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -16165,7 +16167,6 @@ exports.locals = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__UsersList_css__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__UsersList_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__UsersList_css__);
-
 
 
 
@@ -16193,7 +16194,7 @@ var UsersList = function UsersList(props) {
 	);
 };
 
-/* unused harmony default export */ var _unused_webpack_default_export = (UsersList);
+/* harmony default export */ __webpack_exports__["a"] = (UsersList);
 
 /***/ }),
 /* 88 */
@@ -16254,7 +16255,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "._16RYw-DuB3WVvAZYlpObwy {\n    display: flex;\n    flex: 1;\n    width: 25vw;\n    justify-content: flex-start;\n    flex-direction: column;\n    border-right: 1px solid #ccc;\n}\n\n._2YzLrdLd1MeWx4XQSssJpj {\n    padding: 20px;\n    text-align: center;\n    background: #ccc;\n}\n\n.y02-8vkS2VDRQHBSq-5zv {\n    margin: 0;\n    padding: 0;\n}\n\n._1QIEu1GWfORrHbUUbSWp9g {\n    list-style: none;\n    border-bottom: 1px solid #ccc;\n    padding: 20px;\n    margin: 0 0 0 20px;\n}", ""]);
+exports.push([module.i, "._16RYw-DuB3WVvAZYlpObwy {\r\n    display: flex;\r\n    flex: 1;\r\n    width: 25vw;\r\n    justify-content: flex-start;\r\n    flex-direction: column;\r\n    border-right: 1px solid #ccc;\r\n}\r\n\r\n._2YzLrdLd1MeWx4XQSssJpj {\r\n    padding: 20px;\r\n    text-align: center;\r\n    background: #ccc;\r\n}\r\n\r\n.y02-8vkS2VDRQHBSq-5zv {\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n._1QIEu1GWfORrHbUUbSWp9g {\r\n    list-style: none;\r\n    border-bottom: 1px solid #ccc;\r\n    padding: 20px;\r\n    margin: 0 0 0 20px;\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -16280,7 +16281,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 
 
 
@@ -16394,7 +16394,7 @@ exports = module.exports = __webpack_require__(7)(false);
 
 
 // module
-exports.push([module.i, "._2paQGz9IZpfMwzHu4k5HeL {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 100vw;\n    height: 100vh;\n}\n\n._37u6J9ZrBigjkeSnmF2fyE {\n    padding: 20px;\n    font-size: 2em;\n    border: 0;\n    border-bottom: 1px solid #ccc;\n    width: 510px;\n}", ""]);
+exports.push([module.i, "._2paQGz9IZpfMwzHu4k5HeL {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n\r\n._37u6J9ZrBigjkeSnmF2fyE {\r\n    padding: 20px;\r\n    font-size: 2em;\r\n    border: 0;\r\n    border-bottom: 1px solid #ccc;\r\n    width: 510px;\r\n}", ""]);
 
 // exports
 exports.locals = {

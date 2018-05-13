@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styles from './MessageForm.css';
+
 
 class MessageForm extends Component {
 	constructor(props) {
@@ -11,13 +12,14 @@ class MessageForm extends Component {
 		e.preventDefault();
 		const message = {
 			from: this.props.name,
-			text: this.props.text
+			text: this.state.text
 		};
 		this.props.onMessageSubmit(message);
 		this.setState({ text: '' });
 	}
 
 	changeHandler(e) {
+		console.log(e.target.value);
 		this.setState({ text: e.target.value });
 	}
 
